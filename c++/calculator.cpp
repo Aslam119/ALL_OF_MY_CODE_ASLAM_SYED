@@ -1,72 +1,45 @@
 #include <iostream>
-
 using namespace std;
+
+void getDayOfWeek(int dayNum);
 
 int main()
 {
-    char play = 'y';
+    string clues[] = {"","odd number", "prime number", "Crisriano Ronaldo number","GAME OVER HAHA YOU TOUGHT IT WAS ANOTHER CLUE"};
+    cout<<"WELCOME TO GUESSING NUMBER GAME YOU WILL HAVE ONLY 3 GUESSES AND 3 CLUES"<<endl;
+   
+    //you can choose any secret num
+    
+    int secretNum = 7;
+    int guess;
+    int i = 0;
+    int clue_Count = 0;
+    int guessCount = 0;
 
-    while(play == 'y'){
+    while(guess != secretNum){
+    cout<<"GUESS A NUMBER (1 - 10): "<<endl;
+    cin>>guess;
 
-        float num1,num2;
-    char op;
+    if(guess == secretNum){
+        cout<<"You guessed the number You win!!!!!"<<endl;
+    }
+    else{
+        cout<<"Incorrect guess \n"<<endl;
+        i++;
+        clue_Count++;
+        guessCount++;
+        cout<<"CLUE "<<clueCount<<" : "<<clues[i]<<"\n"<<endl;
 
-    cout<<"ENTER NUMBER 1: "<<endl;
-    cin>>num1;
-    cout<<"ENTER NUMBER 2: "<<endl;
-    cin>>num2;
+             if(guessCount > 3){
+            cout<<"EXCEEDED GUESS LIMIT SORRY BUD YOU LOSE!"<<endl;
+            return 0;
+        }
 
-    cout<<"ENTER OPERATOR, /, *, +, -  : "<<endl;
-    cin>>op;
 
-        while(op != '+' && op != '-' && op != '/' && op != '*')
-    {
-        cout<<"INVALID INPUT PLS ENTER A OPERATOR (+,-,*,/) "<<endl;
-        cout<<"ENTER OPERATOR, /, *, +, -  : "<<endl;
-        cin>>op;
-        cout<<""<<endl;
+
     }
 
 
-    switch(op){
-
-    case '+': {
-        cout<<(num1+num2)<<endl;
-
-cout<<"DO YOU WANT TO CONTINUE OR END(y/n): "<<endl;
-        cin>>play;
-
-        break;
-
-    }
-
-        case '-': {
-        cout<<(num1-num2)<<endl;
-
-cout<<"DO YOU WANT TO CONTINUE OR END(y/n): "<<endl;
-        cin>>play;
-
-        break;
-    }
-
-        case '/': {
-        cout<<(num1/num2)<<endl;
-
-cout<<"DO YOU WANT TO CONTINUE OR END(y/n): "<<endl;
-        cin>>play;
-
-        break;
-    }
-
-        case '*': {
-        cout<<(num1*num2)<<endl;
-
-cout<<"DO YOU WANT TO CONTINUE OR END(y/n): "<<endl;
-        cin>>play;
-
-        break;
-    }
 }
-
-   }
+return 0;
 }
