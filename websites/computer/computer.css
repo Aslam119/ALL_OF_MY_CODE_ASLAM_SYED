@@ -1,0 +1,47 @@
+body {
+  background-color: orange;
+}
+.page {
+  border: solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: lightblue;
+}
+.header {
+  color: black;
+}
+
+.bar > a {
+  text-decoration: none;
+  color: darkblue;
+  background-color: lightskyblue;
+  padding-right: 150px;
+}
+.bar {
+  background-color: lightskyblue;
+}
+
+.contentTitle {
+  color: black;
+}
+
+.contentTitle:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.contentText {
+  background-color: lightblue;
+  color: darkblue;
+  padding: 5px;
+}
+
+.bar > a:hover {
+  text-decoration: none;
+  color: green;
+  cursor: pointer;
+  background-color: lightskyblue;
+  padding-right: 150px;
+}
