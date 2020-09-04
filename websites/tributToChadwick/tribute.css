@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+
+.header > h1 {
+  color: white;
+}
+
+.Title > h2 {
+  color: white;
+}
+
+.page {
+  border: solid white;
+}
+
+.detail > h3 {
+  color: white;
+}
+
+.detail {
+  border-top: solid white;
+}
+
+.Title {
+  border-top: solid white;
+}
+.end {
+  border-top: solid white;
+}
